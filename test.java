@@ -12,8 +12,8 @@ public class test {
     private void idea2(){
         System.out.println("2");
     }
-    private void t1(){
-        System.out.println("t1");
+    private void a(){
+        System.out.println("a");
     }
 
 }
