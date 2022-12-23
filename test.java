@@ -6,7 +6,7 @@
  * @Version 1.0
  */
 public class test {
-    public static void main(String[] args){
-        System.out.println("master");
+    public void idea1(){
+        System.out.println("1");
     }
 }
