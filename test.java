@@ -12,4 +12,7 @@ public class test {
     private void idea2(){
         System.out.println("2");
     }
+    private void idea1(){
+        System.out.println("1");
+    }
 }
