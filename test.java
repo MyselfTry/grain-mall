@@ -12,4 +12,8 @@ public class test {
     private void idea2(){
         System.out.println("2");
     }
+    private void idea3(){
+        System.out.println("3");
+    }
+
 }
