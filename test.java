@@ -12,6 +12,10 @@ public class test {
     private void idea2(){
         System.out.println("2");
     }
+    private void a1(int i){
+        System.out.println("a1");
+    }
+
     private void m(){
         System.out.println("m");
     }
