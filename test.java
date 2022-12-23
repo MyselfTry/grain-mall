@@ -6,7 +6,7 @@
  * @Version 1.0
  */
 public class test {
-    public void idea1(){
-        System.out.println("1");
+    public void idea2(){
+        System.out.println("2");
     }
 }
