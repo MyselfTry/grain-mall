@@ -1,6 +1,4 @@
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @ClassName test
  * @Description
  * @Author coolSeason
@@ -9,7 +7,6 @@
  */
 public class test {
     public static void main(String[] args){
-        System.out.println("ykx");
         System.out.println("master");
     }
 }
