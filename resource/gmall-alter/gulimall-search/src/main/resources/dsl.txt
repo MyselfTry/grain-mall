@@ -1,0 +1,128 @@
+GET /gmall/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "title": {
+              "query": "手机",
+              "operator": "and"
+            }
+          }
+        }
+      ],
+      "filter": [
+        {
+          "terms": {
+            "brandId": [
+              "4"
+            ]
+          }
+        },
+        {
+          "terms": {
+            "categoryId": [
+              "225"
+            ]
+          }
+        },
+        {
+          "bool": {
+            "must": [
+              {
+                "nested": {
+                  "path": "attrs",
+                  "query": {
+                    "bool": {
+                      "must": [
+                        {
+                          "term": {
+                            "attrs.attrId": "5"
+                          }
+                        },
+                        {
+                          "terms": {
+                            "attrs.attrValue": [
+                              "4"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "from": 0,
+  "size": 20,
+  "sort": [
+    {
+      "price": {
+        "order": "desc"
+      }
+    }
+  ],
+  "highlight": {
+    "fields": {
+      "title": {}
+    },
+    "pre_tags": "<em>",
+    "post_tags": "</em>"
+  },
+  "aggs": {
+    "brandIdAgg": {
+      "terms": {
+        "field": "brandId"
+      },
+      "aggs": {
+        "brandName": {
+          "terms": {
+            "field": "brandName"
+          }
+        }
+      }
+    },
+    "categorIdAgg":{
+      "terms": {
+        "field": "categorId"
+      },
+      "aggs": {
+        "categorNameAgg": {
+          "terms": {
+            "field": "ategorName"
+          }
+        }
+      }
+    },
+    "attrAgg":{
+      "nested": {
+        "path": "attrs"
+      },
+      "aggs": {
+        "attrIdAgg": {
+          "terms": {
+            "field": "attrs.attrId"
+          },
+          "aggs": {
+            "attrNameAgg": {
+              "terms": {
+                "field": "attrs.attrName"
+              }
+            },
+            "attrValueAgg":{
+              "terms": {
+                "field": "attrs.attrValue"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

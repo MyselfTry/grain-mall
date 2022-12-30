@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.java.gmall.wms.dao.WareSkuDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.java.gmall.wms.entity.WareSku" id="wareSkuMap">
+        <result property="id" column="id"/>
+        <result property="skuId" column="sku_id"/>
+        <result property="wareId" column="ware_id"/>
+        <result property="stock" column="stock"/>
+        <result property="skuName" column="sku_name"/>
+        <result property="stockLocked" column="stock_locked"/>
+    </resultMap>
+
+    <select id="checkStore" resultType="com.java.gmall.wms.entity.WareSku">
+        SELECT * FROM `wms_ware_sku` WHERE sku_id = #{skuId} AND `stock`-`stock_locked` > #{count}
+    </select>
+
+    <update id="lockStore">
+        UPDATE `wms_ware_sku` SET `stock_locked` = `stock_locked` + #{count} WHERE `id` = #{id}
+    </update>
+
+    <update id="unLockStore">
+        UPDATE `wms_ware_sku` SET `stock_locked` = `stock_locked` - #{count} WHERE `id` = #{id}
+    </update>
+
+    <update id="minusStock">
+        UPDATE `wms_ware_sku` SET `stock` = `stock` - #{count}, `stock_locked` = `stock_locked` - #{count} WHERE `id` = #{id}
+    </update>
+
+
+</mapper>

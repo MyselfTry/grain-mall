@@ -1,0 +1,35 @@
+server:
+  port: 8092
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: non_null  # 序列化时过滤为null的属性
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.131:8848
+  redis:
+    host: localhost
+  rabbitmq:
+    host: 106.54.238.192
+    username: gmall
+    password: gmall
+    virtual-host: /gmall
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+
+alipay:
+  app_id: 2016091500518882
+  merchant_private_key: MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC0d+/0p/Gw+isfrRO+d3ex1RKGzA00rJ07ttWhdNBTma4Q2sy0H4nR1B8zUsj5M4BA3/4WJvD2o/YrZ8yHjFr9m+TItvHz55dWH+B+muSEBHhQH485029Bl8sCslrJXXiZYCr/LO+0JVeKt8Byp2xoW1a6xw3UCFN89ZmK+iBFHkD8+Iio0EXrHbNDWXfnKefWkFcedHPqJGq+ICt40kTh+PlRbiSeNaUWKt5VzUBQQgu10PdJqPQ4OV/+NHoL/kssC7iSZWJ41JsjUHNY0EzPYzflxXMt22k2eHlKl8P6IkO9SqoN3H8JJXXN5joMv5ohlpxv9axwAeZWRQ5LvuBvAgMBAAECggEALXXtF2dbBebvCAq0Z412tHBlO1mZlgRJk2pKRGLFu9mBtLM5T8KGGDpkJayb/dKQY0dJnVDv8GF7OJHsPtUHcs1bg4g6SOO1Brf++EWSfQMXP6/Dh6CQbSiMtkAxiHooUBKeoisysuGZPNNvAjLUpzEjFuffvuLeDSNdK1o42NAKz3a4kCzB8OxJKfXrZ4sV1Y0QRQqDxAlicAL8zVa2gpQGyc7bDrf9zdvLZSH2MQUABqDiAmlwxEOX7gEDzK5fLqn095ILl4Z3cG8fFZFY4toClwcwDELGdVS6a31AzYCgnQyCL6qfJA6WSbFPOKcahUVMh4RzprpA+vDDWEEEwQKBgQDgpQlZrIleYgREieFPlaIGyF7TXnXHmZHi+CsmVZf2QO3KTtzvteDepJZ7rK0FVf1LQoLjE0NECpWaJOGO8K/LgbensM6JJFMm3BSNkqjKEDw2p+XLBinM5QgAvJYE/in0GphKDEpLsUtpkQVIkNd+P2puFXPhOlmFbjPA5J9XIQKBgQDNqGfjINovaf1JWXtMuJSmmdE4ingT9+sU7K+tUXH6gDEzSt1slUrD5yRgac55XIAgTZQg2IsyNNw6zoBHTHXPbmSSHw6+gpsuLI3Dzb71IvCF4qa3EMcThDSSimIhkGiruCQBIitNFtoWxyxyXFhzxQXWC7fBJJoSBV0cMyeVjwKBgFul2P+1rUFNObKAkeQ3Bqg/vLf89I4e7+6qEmiMSPfVG24K6IX/LKOIgEAqfVgM8c5vbxiW9j1fGBOP8lmvhfi/jh6iulAm+qmC5fuwFp6BKx+dNdmzRQBre+1ZAtc8nf8Rjom/I9xnk32ZBY/KT7AYzSHmLKV5eaY/BGwwmXUhAoGAXpPS6t4B2Qo6JFBVZsv/+LoGQKVVYYGDB8VtaRxqeVQYzEjimXvyvTMARKKEBMXoWnKy64QKR5WNrjGnRqLADxvqflRwGGbB7LMqouBssBlYWYoJN2ks1CnZb4baaCscJ9RwImFPXo1i0FTaeOFFAECcVXpgEB/ABweWcVCJJLsCgYAvQEnpgz89q2C+wSloPvqxtdWFs23FxUuPswMjAvyx3af0tB1SRFu0qyS/zpGuvMt/7aZjQfIYxzfKf6UryDlTGZUvXPFjbS/mKkGorUkh5MkTYzgsiQIFmUdkIH1ddknPeP9kk0pPmvYfhTwx5aZ4cJjXeVrcqRXBftyAjTD5ZQ==
+  alipay_public_key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA14Mif6JjOaBsw31VlHTOPKeojISHOKRt7Uu9nJqHx4ot4mzzABxh2hyHGUI/0N/VH0ilJtKaXHLdC1xoIK5oBr9ugLt9hB755NvXPXBIm8D1z/wfJQd+FwHgOjXnz3CXL42BtJrq0YGcOjiJFHcF1MPwrdfzJQ3pyyLzyR2IHEDW7YBuceU6q1hIcTBQLRQBAO2RiUBpx7pQjNRfPXp2w6Tfy/5g2McZdC69xe5QHHOQ55Mbd3QG6UiYLTzkv6aBnwz4WJA5VAcRocY9HaXdNe7M2MGjrh/AlSkwpdH4bRHOewt48fTUwFoEZwESg9eNsRrRjHcew95oNIvtN66u+wIDAQAB
+  return_url: http://www.baidu.com
+  notify_url: http://bynxbp.natappfree.cc/api/pay/alipay_callback
+  sign_type: RSA2
+  charset: utf-8
+  gatewayUrl: https://openapi.alipaydev.com/gateway.do
