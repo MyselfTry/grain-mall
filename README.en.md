@@ -1,7 +1,7 @@
-# 谷粒商城
+# 谷粒商城源码
 
 #### Description
-{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}
+谷粒商城源码
 
 #### Software Architecture
 Software architecture description
