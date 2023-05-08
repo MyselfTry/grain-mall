@@ -798,7 +798,7 @@ https://blog.csdn.net/qq_36454312/article/details/123662742
 https://blog.csdn.net/qq_45925197/article/details/127045126?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-2-127045126-blog-43970807.pc_relevant_3mothn_strategy_and_data_recovery&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-2-127045126-blog-43970807.pc_relevant_3mothn_strategy_and_data_recovery&utm_relevant_index=3
 
 - cmd 运行startup.cmd 文件
-- 访问localhost:8848/nacos/
+- 访问43.142.52.23:8848/nacos/
 - 使用默认的 nacos/nacos 登录
 
 ![image-20201016153720815](image/image-20201016153720815.png)

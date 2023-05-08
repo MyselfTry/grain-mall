@@ -113,7 +113,7 @@ cmd startup.cmd
 
 
 
-访问：http://localhost:8848/nacos
+访问：http://43.142.52.23:8848/nacos
 
 用户名密码：nacos/nacos
 
@@ -1514,7 +1514,7 @@ Sentinel 和 Hystrix 的原则是一致的: 当调用链路中某个资源出现
 
 ```properties
 # 这里datasource后的consumer是数据源名称，可以随便写，推荐使用服务名
-spring.cloud.sentinel.datasource.consumer.nacos.server-addr=localhost:8848
+spring.cloud.sentinel.datasource.consumer.nacos.server-addr=43.142.52.23:8848
 spring.cloud.sentinel.datasource.consumer.nacos.dataId=${spring.application.name}-sentinel-rules
 spring.cloud.sentinel.datasource.consumer.nacos.groupId=SENTINEL_GROUP
 spring.cloud.sentinel.datasource.consumer.nacos.data-type=json

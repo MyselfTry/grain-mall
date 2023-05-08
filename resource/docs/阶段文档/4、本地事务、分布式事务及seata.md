@@ -1248,7 +1248,7 @@ registry.conf内容如下：
 registry {
   type = "nacos"
   nacos {
-    serverAddr = "localhost:8848"
+    serverAddr = "43.142.52.23:8848"
     namespace = "public"
     cluster = "default"
   }
